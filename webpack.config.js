@@ -6,9 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 webpack会require获取这个模块的配置然后执行相应的操作*/
 
 module.exports = {   
-    /*development 开发环境 启动devserver后浏览器souces可断
+    /*development 开发环境 启动devserver后浏览器souces可断点js
     production生产环境 浏览器souces打开是编译后文件（压缩过）。*/
-    
     mode: 'development',   
     entry: './index.js',   //打包入口文件
     output: {
@@ -28,7 +27,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({   //编译插件
+        new HtmlWebpackPlugin({   //html编译插件
             template: './index.html'
         }),
     ],
