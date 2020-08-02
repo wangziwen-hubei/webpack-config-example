@@ -12,6 +12,7 @@ module.exports = {
     entry: './index.js',   //打包入口文件
     output: {
         filename: '[name].js',   //输出文件名
+        // __dirname nodejs的变量表示当前路径
         path: path.resolve(__dirname, 'dist')   //输出路径
     },
     module: {
@@ -27,7 +28,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({   //html编译插件
+        new HtmlWebpackPlugin({   //复制'./index.html'文件 并且默认引入index.js
             template: './index.html'
         }),
     ],
